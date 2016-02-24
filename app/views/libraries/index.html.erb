@@ -1,35 +1,44 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-8">
+        
 
-<h1>Git管理された蔵書アプリの一覧さらに改変版さらにさらに改変</h1>
 
-<table>
-  <thead>
-    <tr>
-     <th>graphic</th>
-      <th>Book title</th>
-      <th>Author</th>
-      <th>Price</th>
-      <th>Publisher</th>
-      <th>Release</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <p id="notice"><%= notice %></p>
 
-  <tbody>
-    <% @libraries.each do |library| %>
-      <tr>
-        <td><%= image_tag library.graphic %></td>
-        <td><%= library.book_title %></td>
-        <td><%= library.author %></td>
-        <td><%= library.price %></td>
-        <td><%= library.publisher %></td>
-        <td><%= library.Release %></td>
+    <h1>Git管理された蔵書アプリの一覧さらに改変版さらにさらに改変</h1>
 
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <table>
+      <thead>
+        <tr>
+         <th>graphic</th>
+          <th>Book title</th>
+          <th>Author</th>
+          <th>Price</th>
+          <th>Publisher</th>
+          <th>Release</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-<br>
+      <tbody>
+        <% @libraries.each do |library| %>
+          <tr>
+            <td><%= image_tag library.graphic %></td>
+            <td><%= library.book_title %></td>
+            <td><%= library.author %></td>
+            <td><%= library.price %></td>
+            <td><%= library.publisher %></td>
+            <td><%= library.Release %></td>
 
-<%= link_to 'New Library', new_library_path %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+    <br>
+  <div class="col-md-4">
+    <%= link_to 'New Library', new_library_path %>
+  </div>
+    
+</div>
